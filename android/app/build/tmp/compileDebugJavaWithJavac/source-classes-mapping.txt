@@ -1,0 +1,14 @@
+com/qatar/MainApplication.java
+ com.qatar.MainApplication
+ com.qatar.MainApplication$1
+com/qatar/BuildConfig.java
+ com.qatar.BuildConfig
+com/qatar/MainActivity.java
+ com.qatar.MainActivity
+com/qatar/ReactNativeFlipper.java
+ com.qatar.ReactNativeFlipper
+ com.qatar.ReactNativeFlipper$1
+ com.qatar.ReactNativeFlipper$2
+ com.qatar.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

@@ -1,0 +1,6 @@
+module Pods_qatar_qatarTests {
+  umbrella header "Pods-qatar-qatarTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
