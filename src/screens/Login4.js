@@ -164,7 +164,7 @@ export default function Login({ navigation }) {
                             placeholder='Ingresa tu contraseña'
                             autoCompleteType='password'
                             keyboardType='default'
-                            style={[styles.textInput, { backgroundColor: colors.backgroud }]}
+                            style={[styles.textInput, { backgroundColor: colors.background }]}
                             autoCorrect={false}
                             secureTextEntry={data.secureTextEntry ? true : false}
                             onChangeText={(val) => handlePasswordChange(val)}
@@ -192,7 +192,6 @@ export default function Login({ navigation }) {
 
                     <View style={styles.btnContainer}>
                         <Button
-                            label='Iniciar sesión'
                             color='blue'
                             mode='contained'
                             icon='login'
