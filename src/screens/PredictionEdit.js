@@ -169,7 +169,7 @@ export default function PredictionEdit({navigation, route}) {
                   ]}
                   autoFocus={true}
                   value={localGoals}
-                  keyboardType="numeric"
+                  keyboardType="number-pad"
                   onChangeText={onChangeLocalGoals}
                 />
               </View>

@@ -1,23 +1,21 @@
 import React from 'react';
-import {TouchableOpacity, View, StyleSheet} from 'react-native';
+import {TouchableOpacity, View, StyleSheet, useColorScheme} from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
-//import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Icon} from 'react-native-elements';
 import ImagePickerCropper from 'react-native-image-crop-picker';
-import { Icon2 } from 'react-native-elements';
 import { useTheme, Caption, Title, Paragraph, Text} from 'react-native-paper';
-import {AuthContext} from '@context/auth/AuthContext';
+//import {AuthContext} from '@context/auth/AuthContext';
 
 
 const ImageCropPicker = React.forwardRef(({onFileSelected}, ref) => {
   const {colors} = useTheme();
-  const {state} = React.useContext(AuthContext);
+  //const {state} = React.useContext(AuthContext);
+  const isDarkMode = useColorScheme() === 'dark';
   const options = [
     {
       name: 'Desde la Cámara',
-      //icon: <Icon color='grey' size={26} name="camera" />
-      icon: <View style={[styles.dm, {backgroundColor: state.isDarkTheme ? "#02AE9C" : "#E6E6EC"}]}><Icon 
-            color={state.isDarkTheme ? 'white' : "black"}
+      icon: <View style={[styles.dm, {backgroundColor: isDarkMode ? "#02AE9C" : "#E6E6EC"}]}><Icon 
+            color={isDarkMode ? 'white' : "black"}
             size={22} 
             name="camera" />
           </View>
@@ -41,10 +39,8 @@ const ImageCropPicker = React.forwardRef(({onFileSelected}, ref) => {
     },
     {
       name: 'Desde la Galería',
-      //icon: <Icon name="image" color='grey' size={26} />
-      // icon: <View style={styles.dm}><Icon color='black' size={22} name="image" /></View>,
-      icon: <View style={[styles.dm, {backgroundColor: state.isDarkTheme ? "#02AE9C" : "#E6E6EC"}]}><Icon 
-          color={state.isDarkTheme ? 'white' : "black"}
+      icon: <View style={[styles.dm, {backgroundColor: isDarkMode ? "#02AE9C" : "#E6E6EC"}]}><Icon 
+          color={isDarkMode ? 'white' : "black"}
           size={22} 
           name="image" />
         </View>,
@@ -105,7 +101,6 @@ const styles = StyleSheet.create({
   },
 
   optionsWrapper: {
-    //paddingHorizontal: 15,
     marginHorizontal: 15,
   },
 
@@ -116,10 +111,6 @@ const styles = StyleSheet.create({
   },
   dm: {
     padding: 9,
-    //backgroundColor: "#E6E6EC",
     borderRadius: 20
-    //position: 'absolute',
-    // top: 20,
-    // left: 0,
   },
 });

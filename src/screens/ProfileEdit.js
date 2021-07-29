@@ -42,7 +42,7 @@ const ProfileEdit = ({navigation, route}) => {
   const onFileSelected = image => {
     closeSheet();
     if (image) {
-      console.log(image)
+      //console.log(image)
       setImageData(image.data);
       setImageLoaded(true);
       setPhotoURL(image.path);
@@ -127,6 +127,7 @@ const ProfileEdit = ({navigation, route}) => {
   return (
     <KeyboardAvoidingView style={styles.container}
     behavior ={Platform.OS === 'ios' ? 'padding' : 'height'}
+    keyboardVerticalOffset={92}
     >
       <ScrollView>
         <View style={{margin: 15}}>
@@ -248,7 +249,7 @@ const ProfileEdit = ({navigation, route}) => {
               label="Teléfono"
               placeholder="Ingresa tu teléfono"
               placeholderTextColor="#666666"
-              keyboardType="number-pad"
+              keyboardType="phone-pad"
               value={telephone}
               onChangeText={onChangeTelephone}
               autoCorrect={false}
