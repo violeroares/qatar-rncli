@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect} from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 import {
   Alert,
   Button,
@@ -19,27 +19,27 @@ import {
   Switch
 } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {AuthContext} from '@context/auth/AuthContext';
+import { AuthContext } from '@context/auth/AuthContext';
 import RankingContext from '@context/ranking/RankingContext';
 import { useTheme } from '@react-navigation/native';
 
 const qatarGPUrl =
   'https://play.google.com/store/apps/details?id=com.fixsis.Rusia';
 
-export default function Profile({navigation}) {
-  const {error, userPoints, userRanking, getUserRanking} = useContext(
+export default function Profile({ navigation }) {
+  const { error, userPoints, userRanking, getUserRanking } = useContext(
     RankingContext,
   );
-  const {state, logout, toggleTheme} = useContext(AuthContext);
-  const {colors} = useTheme();
+  const { state, logout, toggleTheme } = useContext(AuthContext);
+  const { colors } = useTheme();
 
   useEffect(() => {
-      const timeout = setTimeout(async () => {
-        getUserRanking(state.user.UserId);
-        console.log('useEffect User');
-      }, 1);
-      return () => clearTimeout(timeout);
-    }, [state.user]);
+    const timeout = setTimeout(async () => {
+      getUserRanking(state.user.UserId);
+      console.log('useEffect User');
+    }, 1);
+    return () => clearTimeout(timeout);
+  }, [state.user]);
 
   // useEffect(() => {
   //   getUserRanking(state.user.UserId);
@@ -50,7 +50,7 @@ export default function Profile({navigation}) {
     getUserRanking(state.user.UserId);
   }
 
-  const OpenURLButton = ({url, children}) => {
+  const OpenURLButton = ({ url, children }) => {
     const handlePress = useCallback(async () => {
       // Checking if the link is supported for links with custom URL scheme.
       const supported = await Linking.canOpenURL(url);
@@ -85,7 +85,7 @@ export default function Profile({navigation}) {
       },
       {
         text: 'No',
-        onPress: () => {},
+        onPress: () => { },
         style: 'cancel',
       },
     ]);
@@ -93,7 +93,7 @@ export default function Profile({navigation}) {
 
   return error ? (
     <View style={styles.error}>
-      <Text style={{padding: 10}}>{error}</Text>
+      <Text style={{ padding: 10 }}>{error}</Text>
       <Button title="Recargar" onPress={reloadRankingData} />
     </View>
   ) : (
@@ -104,25 +104,25 @@ export default function Profile({navigation}) {
       }  */}
       <ScrollView>
         <View style={styles.userInfoSection}>
-          <View style={{flexDirection: 'row', marginTop: 15}}>
+          <View style={{ flexDirection: 'row', marginTop: 15 }}>
             <View
               style={{
                 borderWidth: 1,
                 borderRadius: 58,
-                borderColor: '#02AE9C',
+                borderColor: colors.text,//'#02AE9C',
               }}>
               <Avatar.Image
                 source={
                   state.user.ImageFullPath &&
-                  state.user.ImageFullPath != 'no_image'
-                    ? {uri: state.user.ImageFullPath}
+                    state.user.ImageFullPath != 'no_image'
+                    ? { uri: state.user.ImageFullPath }
                     : require('@assets/Smiley.png')
                 }
                 size={80}
-                style={{margin: 3}}
+                style={{ margin: 3 }}
               />
             </View>
-            <View style={{marginLeft: 20}}>
+            <View style={{ marginLeft: 20 }}>
               <Title
                 style={[
                   styles.title,
@@ -143,38 +143,36 @@ export default function Profile({navigation}) {
         <View style={styles.userInfoSection}>
           <View style={styles.row}>
             <Icon name="phone" color={colors.placeholder} size={20} />
-            <Text style={{color: colors.placeholder, marginLeft: 20}}>
+            <Text style={{ color: colors.placeholder, marginLeft: 20 }}>
               {state.user.Telephone}
             </Text>
           </View>
           <View style={styles.row}>
             <Icon name="email" color={colors.placeholder} size={20} />
-            <Text style={{color: colors.placeholder, marginLeft: 20}}>
+            <Text style={{ color: colors.placeholder, marginLeft: 20 }}>
               {state.user.Email}
             </Text>
           </View>
         </View>
-        <View style={[styles.infoBoxWrapper,{borderBottomColor: colors.border, borderTopColor: colors.border}]}>
+        <View style={[styles.infoBoxWrapper, { borderBottomColor: colors.border, borderTopColor: colors.border }]}>
           <View
-            style={[
-              styles.infoBox,
-              {
-                borderRightColor: colors.border,
-                borderRightWidth: 1,
-              },
+            style={[styles.infoBox, {
+              borderRightColor: colors.border,
+              borderRightWidth: 1,
+            },
             ]}>
-            <Title>{userRanking}</Title>
+            <Title style={{ fontSize: 24 }}>{userRanking}</Title>
             <Caption>Ranking</Caption>
           </View>
           <View style={styles.infoBox}>
-            <Title>{userPoints}</Title>
+            <Title style={{ fontSize: 24 }}>{userPoints}</Title>
             <Caption>Puntos</Caption>
           </View>
         </View>
         <View style={styles.menuWrapper}>
           <TouchableRipple
             onPress={() =>
-              navigation.navigate('profileEdit', {user: state.user})
+              navigation.navigate('profileEdit', { user: state.user })
             }>
             <View style={styles.menuItem}>
               <Icon name="account-check-outline" color="#7982FF" size={25} />
@@ -189,21 +187,21 @@ export default function Profile({navigation}) {
             </View>
           </TouchableRipple>
           <TouchableRipple
-            onPress={() => navigation.navigate('boards', {user: state.user})}>
+            onPress={() => navigation.navigate('boards', { user: state.user })}>
             <View style={styles.menuItem}>
               <Icon name="clipboard-list-outline" color="#9CD31D" size={25} />
               <Text style={styles.menuItemText}>Mis cartones</Text>
             </View>
           </TouchableRipple>
           <TouchableRipple
-            onPress={() => navigation.navigate('myHits', {user: state.user})}>
+            onPress={() => navigation.navigate('myHits', { user: state.user })}>
             <View style={styles.menuItem}>
               <Icon name="check-circle-outline" color="#69A7F2" size={25} />
               <Text style={styles.menuItemText}>Mis aciertos</Text>
             </View>
           </TouchableRipple>
-        
-            {/* <TouchableRipple onPress={() => {toggleTheme()}}>
+
+          {/* <TouchableRipple onPress={() => {toggleTheme()}}>
               <View style={styles.menuItem}>
                   <Icon name="invert-colors" color="#9CD31D" size={25} />
                   <Text style={styles.menuItemText}>Tema Oscuro</Text>
@@ -212,7 +210,7 @@ export default function Profile({navigation}) {
                   </View>
               </View>
           </TouchableRipple> */}
-          
+
 
           <OpenURLButton url={qatarGPUrl}>Califica esta App</OpenURLButton>
           <TouchableRipple
@@ -274,9 +272,9 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 26,
     fontFamily: 'HelveticaNeue',
-    fontWeight: '200',
+    fontWeight: '300',
   },
-  error:{
+  error: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',

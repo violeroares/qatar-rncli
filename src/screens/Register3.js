@@ -303,7 +303,8 @@ export default function Register({ navigation }) {
                                     style={{
                                         borderWidth: 3,
                                         borderRadius: 124,
-                                        borderColor: '#02AE9C',
+                                        borderColor: colors.text, 
+                                        //borderColor: '#02AE9C',
                                     }}>
                                     <Avatar.Image
                                         source={
@@ -331,8 +332,9 @@ export default function Register({ navigation }) {
                                         <Icon
                                             name="camera"
                                             type="material-community"
-                                            color="black"
-                                            raised
+                                            color="#F3F1F7"
+                                            reverse
+                                            reverseColor="black"
                                             size={20}
                                             onPress={() => {
                                                 openSheet();
@@ -566,8 +568,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 87,
         left: 70,
-        elevation: 1,
-        shadowOpacity: 0.1
+        // elevation: 1,
+        // shadowOpacity: 0.1
     },
     action: {
         flexDirection: 'row',

@@ -183,6 +183,7 @@ const Predictions = ({navigation}) => {
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 10,
         //elevation: 1,
+        
         borderColor: colors.border
       }}
       itemStyle={{
@@ -205,6 +206,7 @@ const Predictions = ({navigation}) => {
         padding: SPACING / 2,
         paddingTop: StatusBar.currentHeight - 15 || 42,
         backgroundColor: colors.background2,
+        marginTop: 5
       }}
       showsVerticalScrollIndicator={false}
       refreshControl={

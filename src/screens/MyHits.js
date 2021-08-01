@@ -66,7 +66,7 @@ export default function MyHits() {
     return (
       <View>
         <View style={[styles.listItem, {backgroundColor: colors.card}]}>
-          <View style={[styles.title, {borderBottomColor: colors.border}]}>
+          <View style={[styles.title, {borderBottomColor: colors.separator}]}>
             <Title
               style={{
                 textAlign: 'center',
@@ -125,8 +125,8 @@ export default function MyHits() {
               styles.title2,
               {
                 marginTop: 15,
-                borderBottomColor: colors.border,
-                borderTopColor: colors.border,
+                borderBottomColor: colors.separator,
+                borderTopColor: colors.separator,
               },
             ]}>
             <Text

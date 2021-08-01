@@ -140,7 +140,7 @@ const ProfileEdit = ({navigation, route}) => {
                 style={{
                   borderWidth: 3,
                   borderRadius: 161,
-                  borderColor: '#02AE9C',
+                  borderColor: colors.text, //'#02AE9C',
                 }}>
                 <Avatar.Image
                   source={
@@ -166,10 +166,12 @@ const ProfileEdit = ({navigation, route}) => {
                 />
                 :
                 <Icon
+                    
                     name="camera"
                     type="material-community"
-                    color="black"
-                    raised
+                    color="#F3F1F7"
+                    reverse
+                    reverseColor="black"
                     size={20}
                     onPress={() => {
                       openSheet();
@@ -405,8 +407,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 125,
     left: 115,
-    elevation: 1,
-    shadowOpacity: 0.1
+    // elevation: 1,
+    // shadowOpacity: 0.1
   },
   btnContainer: {
     marginTop: 10

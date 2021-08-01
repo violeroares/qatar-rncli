@@ -30,6 +30,7 @@ const ImageCropPicker = React.forwardRef(({onFileSelected}, ref) => {
           freeStyleCropEnabled: true, 
           includeBase64: true,
           multiple: false,
+          compressImageQuality: 0.5,
         })
           .then((images) => {
             onFileSelected(images);
@@ -53,6 +54,7 @@ const ImageCropPicker = React.forwardRef(({onFileSelected}, ref) => {
           freeStyleCropEnabled: true,
           includeBase64: true,
           multiple: false,
+          compressImageQuality: 0.5
         })
           .then((images) => {
             onFileSelected(images);

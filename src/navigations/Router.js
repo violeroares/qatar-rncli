@@ -61,12 +61,16 @@ export default function Router(props) {
 
       //opcion 3
       background: '#ffffff',
-      background2: '#F7F7F7',
+      //background2: '#F7F7F7',
+      background2: '#F3F1F7',
       surface: '#ffffff',
       primary: '#4890EF',
       box: "#ffffff",
       tabBarColor: "#ffffff",
-      authScreensColor: '#05375a'
+      authScreensColor: '#05375a',
+
+      separator: 'rgba(84,85,88, 0.25)',
+      separatorTop: 'rgba(84,85,88, 0.25)',
     },
   };
 
@@ -102,7 +106,10 @@ export default function Router(props) {
       box: "#022A4D",
       tabBarColor: "#111D24",
       border: '#1C2830',
-      authScreensColor: '#111D24'
+      authScreensColor: '#111D24',
+
+      separator: 'rgba(84,85,88, 0.55)',
+      separatorTop: 'rgba(84,85,88, 1)',
       //opcion 3
       //  surface: '#1E1E1E',
       //  card: '#1E1E1E',

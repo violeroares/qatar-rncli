@@ -133,9 +133,14 @@ export default function PredictionEdit({navigation, route}) {
           2) Presione el botón "Confirmar" para guardar los cambios.
           </Text>
         </View>
-        <Text style={[styles.textTittle, {backgroundColor: colors.card}]}>
+        <View style={[styles.textTittle, {backgroundColor: colors.card}]}>
+          <Text style={{fontWeight: 'bold'}}>
           REALIZAR PREDICCIÓN
-        </Text>
+          </Text>
+        </View>
+        {/* <Text style={[styles.textTittle, {backgroundColor: colors.card}]}>
+          REALIZAR PREDICCIÓN
+        </Text> */}
         <View style={styles.listItem}>
           <View style={styles.teamColumn}>
             <Text style={{textAlign: 'left', marginBottom: 5}}>Local</Text>
@@ -189,7 +194,7 @@ export default function PredictionEdit({navigation, route}) {
                     },
                   ]}
                   value={visitorGoals}
-                  keyboardType="numeric"
+                  keyboardType="number-pad"
                   onChangeText={onChangeVisitorGoals}
                 />
               </View>

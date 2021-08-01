@@ -1,6 +1,5 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
-//import { useTheme } from '@react-navigation/native';
 import {useTheme, Text, Title} from 'react-native-paper';
 
 export default function HeaderListMatch() {
