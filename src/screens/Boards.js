@@ -63,7 +63,7 @@ const Boards = ({navigation}) => {
     if (imageData == null) {
       Alert.alert(
         'Error',
-        'Debes adjuntar la foto para solicitar uncartón de juego.',
+        'Debes adjuntar la foto para solicitar un cartón de juego.',
         [{text: 'Aceptar'}],
       );
       return;
@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 10,
-    elevation: 3,
+    //elevation: 3,
   },
   fondo: {
     position: 'absolute',
@@ -341,7 +341,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flexDirection: 'row',
     height: 40,
-    elevation: 1.5,
+    //elevation: 1.5,
     marginBottom: 5,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 0,

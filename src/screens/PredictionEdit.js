@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 10,
-    elevation: 3,
+    //elevation: 3,
 
   },
   textTittle: {
@@ -288,7 +288,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 10,
-    elevation: 3,
+    //elevation: 3,
     fontWeight: 'bold',
   },
   row: {

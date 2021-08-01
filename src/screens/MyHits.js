@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 10,
-    elevation: 4,
+    //elevation: 4,
   },
   header: {
     padding: 0,
@@ -293,7 +293,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 10,
     height: 40,
-    elevation: 3,
+    //elevation: 3,
     marginBottom: 5,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 0,

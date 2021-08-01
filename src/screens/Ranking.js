@@ -4,6 +4,7 @@ import {
   Button,
   FlatList,
   Image,
+  Platform,
   RefreshControl,
   StyleSheet,
   TouchableOpacity,
@@ -134,7 +135,7 @@ const Ranking = ({navigation}) => {
             flex: 1,
             marginLeft: 15,
           }}>
-          <Text style={{fontWeight: 'bold', fontFamily: 'HelveticaNeue'}}>
+          <Text style={{fontWeight: 'bold', fontFamily: Platform.OS !== 'android' ? "HelveticaNeue" : "Roboto"}}>
             {item.User.FullName}
           </Text>
         </View>
@@ -273,7 +274,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flexDirection: 'row',
     height: 40,
-    elevation: 1.5,
+    //elevation: 1.5,
     marginBottom: 5,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 0,

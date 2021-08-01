@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     flexDirection: 'row',
     height: 40,
-    elevation: 1.5,
+    //elevation: 1.5,
     marginBottom: 5,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 0,

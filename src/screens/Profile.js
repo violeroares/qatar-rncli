@@ -235,7 +235,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   title: {
-    fontFamily: 'HelveticaNeue',
+    fontFamily: Platform.OS !== 'android' ? "HelveticaNeue" : "Roboto",
     fontWeight: 'bold',
     fontSize: 24,
   },
@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontSize: 17,
     lineHeight: 26,
-    fontFamily: 'HelveticaNeue',
+    fontFamily: Platform.OS !== 'android' ? "HelveticaNeue" : "Roboto",
     fontWeight: '300',
   },
   error: {

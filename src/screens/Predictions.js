@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 10,
-    elevation: 3,
+    //elevation: 3,
     textAlign: 'justify'
   },
   teamColumn: {
@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
     width: 50,
     marginLeft: 5,
     marginRight: 5,
-    elevation: 3,
+    //elevation: 3,
   },
   textVs: {
     fontSize: 14,
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 10,
-    elevation: 3,
+    //elevation: 3,
   },
   listItem: {
     margin: 1,
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderRadius: 10,
     height: 40,
-    elevation: 3,
+    //elevation: 3,
     marginBottom: 5,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 0,
