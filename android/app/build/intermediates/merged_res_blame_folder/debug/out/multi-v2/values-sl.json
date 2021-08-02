@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/christianolivera/React-Native/qatar/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml",
+            "outputFile": "/Users/christianolivera/Documents/Proyectos/qatar-rncli/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "/Users/christianolivera/.gradle/caches/transforms-2/files-2.1/f03ec885b8fabdebb4f0d3bbade5009e/core-1.3.2/res/values-sl/values-sl.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/christianolivera/React-Native/qatar/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "outputFile": "/Users/christianolivera/Documents/Proyectos/qatar-rncli/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
             "map": [
                 {
                     "source": "/Users/christianolivera/.gradle/caches/transforms-2/files-2.1/99c6ff58ff6c83738ffbf8a18655305e/jetified-ucrop-2.2.6-native/res/values-zh/values-zh.xml",
