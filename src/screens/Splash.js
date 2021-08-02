@@ -1,13 +1,14 @@
 import React from 'react';
 import {
   Dimensions,
+  Image,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
   StatusBar,
 } from 'react-native';
-import * as Animatable from 'react-native-animatable';
+// import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useTheme} from '@react-navigation/native';
@@ -19,15 +20,23 @@ const SplashScreen = ({navigation}) => {
     <View style={[styles.container,{backgroundColor: colors.authScreensColor}]}>
       <StatusBar backgroundColor ={colors.authScreensColor} barStyle="light-content" />
       <View style={styles.header}>
-        <Animatable.Image
+        {/* <Animatable.Image
           animation="bounceIn"
           duration={150}
           source={require('@assets/LogoQ.png')}
           style={styles.logo}
           resizeMode="cover"
+        /> */}
+        <Image
+                  source={require('@assets/LogoQ.png')}
+                  style={styles.logo}
+                  resizeMode="cover"
         />
+
       </View>
-      <Animatable.View style={styles.footer} animation="fadeInUpBig" duration={150}>
+      {/* <Animatable.View style={styles.footer} animation="fadeInUpBig" duration={150}> */}
+      <View style={styles.footer}>
+
         <Text style={styles.title}>Bienvenido al juego de Qatar 2022!</Text>
         <Text style={styles.text}>Inicia sesión con tu cuenta</Text>
         
@@ -53,7 +62,7 @@ const SplashScreen = ({navigation}) => {
             </LinearGradient>
           </TouchableOpacity>
         </View>
-      </Animatable.View>
+      </View>
     </View>
   );
 };
